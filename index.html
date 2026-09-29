@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SyncChapter — 好きなあの瞬間に、何度でも。</title>
+<meta name="description" content="手元の音源と動画にチャプターをつけて、聴きたい場所から、もう一度。iPhone・iPad向けのメディアプレイヤー。">
+<meta property="og:title" content="SyncChapter — 好きなあの瞬間に、何度でも。">
+<meta property="og:description" content="手元の音源と動画に、チャプターを。iPhone・iPad向けのメディアプレイヤー。">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#17191B">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Manrope:wght@500&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<a class="skip" href="#main">本文へ</a>
+
+<header class="head">
+  <div class="wrap head__in">
+    <a class="brand" href="#top"><img class="brand__icon" src="assets/app-icon.png" width="28" height="28" alt="">SyncChapter</a>
+    <button class="menu" type="button" aria-expanded="false" aria-controls="nav">
+      <span class="menu__bars" aria-hidden="true"></span><span class="sr">メニュー</span>
+    </button>
+    <nav id="nav" class="nav" aria-label="ページ内">
+      <a href="#features">できること</a>
+      <a href="#how">使い方</a>
+      <a href="#faq">よくある質問</a>
+    </nav>
+    <!-- App Store の URL：このページの3か所（ヘッダー・ヒーロー・最後の案内）を同じ URL に替える -->
+    <a class="cta cta--sm" href="https://apps.apple.com/jp/app/idXXXXXXXXXX">ダウンロード</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- 1. ヒーロー -->
+  <section id="top" class="hero">
+    <div class="wrap hero__grid">
+      <div class="hero__text">
+        <p class="eyebrow">音源と動画に、チャプターを。</p>
+        <h1 class="h1">好きなあの瞬間に、<br>何度でも。</h1>
+        <p class="hero__lead">ライブのソロも、お気に入りの一曲も。<br>手元の音源と動画にチャプターをつけて、<br>聴きたい場所から、もう一度。</p>
+        <div class="actions">
+          <a class="cta" href="https://apps.apple.com/jp/app/idXXXXXXXXXX">App Storeでダウンロード</a>
+          <a class="cta cta--ghost" href="#how">使い方を見る</a>
+        </div>
+        <p class="note">iPhone・iPad向け</p>
+      </div>
+      <figure class="hero__shot">
+        <div class="device device--hero">
+          <img src="assets/02-player.png" width="345" height="750" alt="再生画面。ライブ音源「Live at 港湾倉庫 2025」を30分32秒まで再生していて、シークバーにチャプターの点が並び、下に「再生中のチャプター ギターソロ」と表示されている。">
+        </div>
+      </figure>
+    </div>
+
+    <!-- チャプタートラック。1:10:19 の音源に対する実際の比率で置く -->
+    <div class="wrap">
+      <div class="track" role="img" aria-label="操作イメージ：ライブ音源の波形に、00:00 開演、12:08 MC、30:24 ギターソロの3つのチャプター。ギターソロが選ばれている。">
+        <div class="wave" data-wave data-pos="43.4" aria-hidden="true"></div>
+        <div class="track__head" style="--at:43.4%" aria-hidden="true"></div>
+        <div class="track__marks" aria-hidden="true">
+          <span class="mark" style="--at:0%"><b>00:00</b>開演</span>
+          <span class="mark" style="--at:17.3%"><b>12:08</b>MC</span>
+          <span class="mark is-on" style="--at:43.2%"><b>30:24</b>ギターソロ</span>
+        </div>
+        <p class="track__label" aria-hidden="true">操作イメージ</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. 操作デモ -->
+  <section id="features" class="sec sec--demo">
+    <div class="wrap demo-grid">
+      <div class="sec__intro">
+        <h2 class="h2">あのフレーズへ、<br>迷わず。</h2>
+        <p class="lead">一度つけたチャプターが、次に聴くときの目印になります。</p>
+      </div>
+
+      <div class="demo" data-demo>
+        <div class="demo__top">
+          <p class="demo__tag">操作イメージ<span>音声は再生されません</span></p>
+          <p class="demo__now" aria-live="polite"><span class="tc" data-demo-time>30:24</span> <span data-demo-name>ギターソロ</span></p>
+        </div>
+        <div class="demo__wave">
+          <div class="wave" data-wave data-pos="43.2" aria-hidden="true"></div>
+          <div class="demo__head" data-demo-head style="--at:43.2%" aria-hidden="true"></div>
+          <i class="demo__tick" style="--at:0%" aria-hidden="true"></i>
+          <i class="demo__tick" style="--at:17.3%" aria-hidden="true"></i>
+          <i class="demo__tick" style="--at:43.2%" aria-hidden="true"></i>
+          <p class="demo__ends tc" aria-hidden="true"><span>0:00</span><span>1:10:19</span></p>
+        </div>
+        <ul class="chips" aria-label="チャプター">
+          <li><button type="button" class="chip" data-at="0" data-time="00:00" data-name="開演" aria-pressed="false"><span class="tc">00:00</span>開演</button></li>
+          <li><button type="button" class="chip" data-at="17.3" data-time="12:08" data-name="MC" aria-pressed="false"><span class="tc">12:08</span>MC</button></li>
+          <li><button type="button" class="chip" data-at="43.2" data-time="30:24" data-name="ギターソロ" aria-pressed="true"><span class="tc">30:24</span>ギターソロ</button></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. 使い方 -->
+  <section id="how" class="sec">
+    <div class="wrap how">
+      <div class="how__text">
+        <h2 class="h2">聴きながら、<br>目次ができる。</h2>
+        <ol class="steps">
+          <li>
+            <h3>音源を開く</h3>
+            <p>手元の音源や動画を読み込みます。</p>
+          </li>
+          <li>
+            <h3>気になるところで打刻</h3>
+            <p>再生しながら、その位置にチャプターを追加します。</p>
+          </li>
+          <li>
+            <h3>名前をつけて保存</h3>
+            <p>次からは、チャプターをタップしてそこから再生。</p>
+          </li>
+        </ol>
+        <p class="aside">打った位置は、波形を見ながら <span class="tc">0.1</span> 秒ずつ微調整できます。</p>
+      </div>
+      <figure class="how__shot">
+        <div class="device">
+          <img src="assets/04-editor.png" width="345" height="750" loading="lazy" alt="同期編集の画面。波形の中央に再生位置の線が立ち、下のチャプター一覧で「サビ 01:15.0」が選ばれている。画面下に「-0.1秒」「+0.1秒」のボタンと大きな打刻ボタンが並ぶ。">
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 4. 普段の再生 -->
+  <section class="sec sec--more">
+    <div class="wrap">
+      <h2 class="h2"><span class="nw">曲も、</span><span class="nw">歌詞も、</span><span class="nw">動画も。</span></h2>
+      <div class="more">
+        <article class="more__item">
+          <figure class="device device--sm">
+            <img src="assets/07-lyrics.png" width="345" height="750" loading="lazy" alt="歌詞の画面。行が縦に並び、再生中の「波の向こうに」だけが白く強調され、左に印が付いている。">
+          </figure>
+          <h3 class="h3">歌詞</h3>
+          <p>再生に合わせて歌詞が進み、行をタップするとそこから再生します。テキストの貼り付けや <span class="tc">.lrc</span> の読み込みにも対応。</p>
+        </article>
+        <article class="more__item">
+          <figure class="device device--sm">
+            <img src="assets/08-video.png" width="345" height="750" loading="lazy" alt="動画の再生画面。上に映像、下に「砂浜」から「帰り道」までの5つのチャプターが時刻とともに並び、再生中の「0:58 防波堤」が強調されている。">
+          </figure>
+          <h3 class="h3">動画のチャプター</h3>
+          <p>講義や自分で撮った動画にも、同じようにチャプターを。</p>
+        </article>
+        <article class="more__item">
+          <figure class="device device--sm">
+            <img src="assets/01-library.png" width="345" height="750" loading="lazy" alt="ライブラリ画面。「すべて・音楽・動画」の切り替え、プレイリストと「チャプター付き」の項目、曲の一覧が並んでいる。">
+          </figure>
+          <h3 class="h3">ライブラリ</h3>
+          <p>プレイリストや並べ替えで整理。チャプター付きの音源は、まとめて見つけられます。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. FAQ -->
+  <section id="faq" class="sec">
+    <div class="wrap faq-grid">
+      <h2 class="h2">よくある質問</h2>
+      <div>
+      <dl class="faq">
+        <div>
+          <dt>どんな音源を使えますか？</dt>
+          <dd>端末に保存した音源・動画のファイルと、端末のミュージックライブラリから読み込める音源です。ストリーミング配信の曲にはチャプターをつけられません。</dd>
+        </div>
+        <div>
+          <dt>元のファイルは変わりますか？</dt>
+          <dd>変わりません。チャプターや歌詞はアプリの中に別で保存し、元のファイルは書き換えません。</dd>
+        </div>
+        <div>
+          <dt>オフラインでも使えますか？</dt>
+          <dd>端末に取り込んだ音源・動画の再生とチャプター編集は、ネットにつながっていなくても使えます。歌詞や曲の情報をネットから探す機能は、設定でオンにしたときだけ使われます。</dd>
+        </div>
+        <div>
+          <dt>作ったチャプターは書き出せますか？</dt>
+          <dd>チャプターと歌詞は、ファイルに書き出して共有できます。書き出されるのは時刻と文字だけで、音源や動画そのものは含みません。</dd>
+        </div>
+      </dl>
+      <p class="faq__more">ほかに気になることは、<a href="https://example.com/contact">お問い合わせ</a>からどうぞ。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 最後の案内 -->
+  <section class="close">
+    <div class="wrap close__in">
+      <h2 class="h2"><span class="nw">あのソロを、</span><span class="nw">もう一度。</span></h2>
+      <p class="close__lead">手元の音源と動画に、チャプターを。</p>
+      <a class="cta" href="https://apps.apple.com/jp/app/idXXXXXXXXXX">App Storeでダウンロード</a>
+      <p class="note">iPhone・iPad向け</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <p class="brand"><img class="brand__icon" src="assets/app-icon.png" width="22" height="22" alt="">SyncChapter</p>
+    <nav class="foot__nav" aria-label="サイト情報">
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="terms.html">利用規約</a>
+      <!-- Google フォームの URL が決まったら差し替える。3ページとアプリの Info.plist（SCContactURL）で同じ URL にする -->
+      <a href="https://example.com/contact">お問い合わせ</a>
+    </nav>
+    <p class="foot__note">画面は開発中のものです。</p>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
